@@ -24,7 +24,7 @@ namespace TestBrowserId.Controllers
         // POST: /Account/LogOn
 
         [HttpPost]
-        public ActionResult Logo(FormCollection frm)
+        public ActionResult LogOn(FormCollection frm)
         {
             string audience = Request.Url.Host + ":" + Request.Url.Port.ToString();
             var assertion = frm["assertion"].ToString();
