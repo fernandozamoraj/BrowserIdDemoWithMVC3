@@ -24,9 +24,9 @@ namespace TestBrowserId.Controllers
         // POST: /Account/LogOn
 
         [HttpPost]
-        public ActionResult Logo(FormCollection frm)
+        public ActionResult LogOn(FormCollection frm)
         {
-            string audience = Request.Url.Host + ":" + Request.Url.Port.ToString();
+            string audience = "http://browseridwithmvc3demo.apphb.com/Account/LogOn";
             var assertion = frm["assertion"].ToString();
 
             BrowserId browserId = new BrowserId(audience, assertion);
